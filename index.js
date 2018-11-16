@@ -11,6 +11,7 @@ server.get("/", (req, res) => {
     res.status(200).send("<h1>Here's the <em>root directory</em></h1>");
 });
 
-server.use("/projects", projectRouter);
 
+server.use("/projects", projectRouter);
+server.use("/actions", actionRouter);
 server.listen(port, () => console.log(`Listening on port ${port}`));
